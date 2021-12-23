@@ -1,0 +1,680 @@
+@use 'mixins' as ownMixin;
+@import 'colors';
+@import 'fonts';
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: 'Mukta', Helvetica, sans-serif;
+   font-size: 16px;
+   color: $fontBlack;
+   line-height: 1.4;
+   background-color: $bgColor;
+}
+
+.container {
+   margin: 0 13%;
+   height: auto;
+}
+
+// Navbar
+.navbar {
+   position: absolute;
+   width: 100%;
+   transition: all .7s ease;
+   .container {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all .3s ease;
+      background-color: none;
+      .navbar-brand {
+         color: $white;
+         text-decoration: none;
+         font-size: 20px;
+         font-family: 'Maven Pro', sans-serif;
+         font-weight: 700;
+      }
+      .btn-toggle {
+         display: none;
+         user-select: none;
+         opacity: 0;
+      }
+      ul li {
+         display: inline-block;
+         a {
+            color: $white;
+            text-decoration: none;
+            margin-right: 50px;
+            font-weight: 500;
+         }
+      }
+   }
+}
+
+.navbar-fixed {
+   overflow: hidden;
+   position: fixed;
+   background-color: $primary;
+   transition: all .7s ease;
+   z-index: 9999;
+   .container {
+      height: 60px;
+      transition: all .7s ease;
+      ul li {
+         .active {
+            background-color: $secondary;
+            padding: 80px 25px;
+         }
+      }
+   }
+}
+
+// Jumbotron
+.jumbotron {
+   background-image: url("../img/jumbotron.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+   .container {
+      h1 {
+         color: $white;
+         font-family: 'Maven Pro', sans-serif;
+         font-size: 40px;
+         font-weight: 700;
+         padding-top: 200px;
+      }
+      p {
+         margin-top: 25px;
+         color: $white;
+         width: 350px;
+      }
+      .links {
+         a:first-child {
+            @include ownMixin.btnLink($white, $primary, 5px, inline-block, 20px, 8px);
+            box-shadow: 0 8px 15px rgba($fontBlack, .1);
+            transition: all .3s ease;
+            font-weight: 500;
+         }
+         a:last-child {
+            @include ownMixin.btnLink($primary, $white, 5px, inline-block, 20px, 0, 0, 0, 14px, 40px, 14px, 40px);
+            box-shadow: 0 8px 15px rgba($fontBlack, .1);
+            transition: all .3s ease;
+            font-weight: 500;
+         }
+         a:hover, a:active {
+            box-shadow: none;
+         }
+      }
+      .medsos {
+         margin-top: 35px;
+         a {
+            color: $white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 15px;
+         }
+      }
+   }
+}
+
+// About //
+.about {
+   .container {
+      padding-top: 100px;
+      .row {
+         display: flex;
+         .col-img {
+            margin-right: 30px;
+            .img-about {
+               width: 330px;
+               height: 500px;
+               border-radius: 5px;
+               background-image: url("/assets/img/me.jpg");
+               background-size: cover;
+               // opacity: 0;
+            }
+         }
+         .col {
+            h1, h3, span {
+               font-family: 'Maven Pro', sans-serif;
+            }
+            h1, h3 {
+               color: $fontBlack;
+            }
+            h1 {
+               font-size: 30px;
+               font-weight: 700;
+               margin-bottom: 25px;
+            }
+            p {
+               color: $fontGray;
+               margin-bottom: 20px;
+            }
+            .tabs {
+               margin-bottom: 35px;
+               .tab-link {
+                  @include ownMixin.btnLink($fontGray, $white, 5px, inline-block, 0, 8px, 0, 0, 9px, 22px, 9px, 22px);
+               }
+               .tab-link.active {
+                  background-color: $secondary;
+                  color: $white;
+               }
+            }
+            .content.aboutme {
+               // display: none;
+               .motto {
+                  color: $fontGray;
+                  font-size: 14px;
+                  font-style: italic;
+                  font-weight: 500;
+                  text-align: center;
+               }
+            }
+            .content.skills {
+               display: none;
+               width: 100%;
+               .row {
+                  display: flex;
+                  justify-content: space-evenly;
+                  align-items: center;
+                  margin: 20px 0;
+                  .bar {
+                     margin-right: 20px;
+                     margin-bottom: 25px;
+                     position: relative;
+                     overflow: hidden;
+                     h3 {
+                        font-family: 'Maven Pro', sans-serif;
+                        font-size: 16px;
+                        font-weight: 700;
+                     }
+                     span {
+                        color: $secondary;
+                        font-size: 16px;
+                        position: absolute;
+                        right: 0;
+                        top: -28px;
+                        opacity: 0;
+                        animation: fade 2s cubic-bezier(1, 0, .5, 1) forwards;
+                     }
+                     .progress {
+                        width: 190px;
+                        height: 5px;
+                        background-color: $lightGray;
+                        margin-top: 5px;
+                        border-radius: 10px;
+                     }
+                     .progress-bar.html {
+                        width: 95%;
+                        height: 5px;
+                        background-color: $secondary;
+                        margin-top: 5px;
+                        border-radius: 10px;
+                     }
+                     .progress-bar.javascript,
+                     .progress-bar.cpp,
+                     .progress-bar.nodejs,
+                     .progress-bar.sass,
+                     .progress-bar.codeigniter {
+                        width: 80%;
+                        height: 5px;
+                        background-color: $secondary;
+                        margin-top: 5px;
+                        border-radius: 10px;
+                     }
+                     .progress-bar.php,
+                     .progress-bar.mysql {
+                        width: 85%;
+                        height: 5px;
+                        background-color: $secondary;
+                        margin-top: 5px;
+                        border-radius: 10px;
+                     }
+                     .progress-bar.html,
+                     .progress-bar.javascript,
+                     .progress-bar.cpp,
+                     .progress-bar.nodejs,
+                     .progress-bar.sass,
+                     .progress-bar.codeigniter,
+                     .progress-bar.php,
+                     .progress-bar.mysql {
+                        // transform: scaleX(0);
+                        animation: fill-progress 1s cubic-bezier(1, 0, .5, 1) forwards;
+                        position: relative;
+                        left: -190px;
+                     }
+                     @keyframes fill-progress {
+                        100% {
+                           left: 0;
+                           position: none;
+                        }
+                     }
+                     @keyframes fade {
+                        100% {
+                           opacity: 1;
+                        }
+                     }
+                  }
+               }
+            }
+            .content.experience {
+               display: none;
+               h3 {
+                  font-family: 'Maven Pro', sans-serif;
+                  font-size: 20px;
+                  font-weight: 700;
+                  margin-bottom: 4px;
+               }
+               .date, .position {
+                  font-family: 'Mukta', Helvetica, sans-serif;
+                  font-size: 14px;
+                  font-weight: 500;
+               } 
+               .date {
+                  margin-right: 6px;
+                  color: $secondary;
+               }
+               .position {
+                  color: $fontGray;
+               }
+               p {
+                  margin-top: 8px;
+               }
+            }
+         }
+      }
+   }
+}
+
+// Services //
+.services {
+   .container {
+      padding-top: 100px;
+      .subheading, h2 {
+         font-family: 'Maven Pro', sans-serif;
+         font-weight: 700;
+         text-align: center;
+      }
+      .subheading {
+         display: block;
+         color: $secondary;
+         font-size: 16px;
+         margin-bottom: 8px;
+         text-transform: uppercase;
+      }
+      h2 {
+         display: block;
+         color: $fontBlack;
+         font-size: 32px;
+         width: 560px;
+         margin: 0 auto;
+      }
+      .g-wrapper {
+         margin-top: 60px;
+         display: grid;
+         grid-template-columns: repeat(3, auto);
+         gap: 1em;
+         .web,
+         .linux,
+         .networking {
+            background-color: $boxServices;
+            width: 75%;
+            height: auto;
+            padding: 40px;
+            .icons {
+               background-color: $secondary;
+               width: 45px;
+               height: 45px;
+               border-radius: 3px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               .fas,
+               .fab {
+                  font-size: 20px;
+                  color: $white;
+               }
+            }
+            h3 {
+               font-family: 'Maven Pro', sans-serif;
+               color: $secondary;
+               font-size: 20px;
+               font-weight: 700;
+               margin-top: 10px;
+               margin-bottom: 16px;
+            }
+            p {
+               color: $fontGray;
+               height: 200px;
+            }
+            a {
+               color: $secondary;
+               text-decoration: none;
+               display: inline-block;
+               display: none;
+               span {
+                  margin-left: 5px;
+               }
+            }
+         }
+      }
+      .contact-me {
+         color: $fontGray;
+         font-weight: 700;
+         font-size: 16px;
+         display: block;
+         text-align: center;
+         margin-top: 50px;
+         margin-bottom: 12px;
+         a {
+            color: $secondary;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+         }
+      }
+      .tagline {
+         color: $fontGray;
+         text-align: center;
+      }
+   }
+}
+
+// Counter //
+.counter {
+   margin-top: 100px;
+   background-image: url('/assets/img/overlay.jpg');
+   background-size: cover;
+   height: 250px;
+   .overlay {
+      background-color: $secondary;
+      height: 250px;
+      opacity: .9;
+      // position: relative;
+      .container {
+         // position: absolute;
+         margin: 0;
+         width: 100%;
+         height: 250px;
+         .count-wrapper {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 250px;
+            .count {
+               display: flex;
+               justify-content: space-evenly;
+               align-items: center;
+               .fas {
+                  color: $white;
+                  font-size: 38px;
+                  margin-right: 15px;
+                  float: left;
+               }
+               .countup,
+               .caption {
+                  flex-direction: column;
+                  font-family: 'Maven Pro', sans-serif;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  color: $white;
+               }
+               .countup {
+                  font-size: 34px;
+               }
+            }
+         }
+      }
+   }
+}
+
+// Portfolio //
+.portfolio {
+   .container {
+      padding-top: 100px;
+      .subheading, h2 {
+         font-family: 'Maven Pro', sans-serif;
+         font-weight: 700;
+         text-align: center;
+      }
+      .subheading {
+         display: block;
+         color: $secondary;
+         margin-bottom: 8px;
+         text-transform: uppercase;
+      }
+      h2 {
+         color: $fontBlack;
+         font-size: 32px;
+         margin-bottom: 40px;
+      }
+      .g-wrapper {
+         display: grid;
+         grid-template-columns: repeat(2, auto);
+         gap: 1em;
+         .projects {
+            background-size: cover;
+            border-radius: 5px;
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            .overlay {
+               width: 100%;
+               height: 350px;
+               border-radius: 5px;
+               opacity: 0;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+               transition: all .3s ease;
+               h3, .type {
+                  font-family: 'Maven Pro', sans-serif;
+                  font-weight: 500;
+                  color: $white;
+                  opacity: 1;
+               }
+               h3 {
+                  font-size: 20px;
+                  margin-bottom: 12px;
+               }
+               .type {
+                  text-transform: uppercase;
+               }
+               .links-wrapper {
+                  margin-top: 30px;
+                  .row {
+                     display: flex;
+                     justify-content: space-evenly;
+                     align-items: center;
+                     .col {
+                        .btn-demo {
+                           @include ownMixin.btnLink($white, $primary, 3px, inline-block, 0, 12px, 0, 0, 4px, 14px, 4px, 14px);
+                           box-shadow: 0 8px 15px rgba($fontBlack, .1);
+                           transition: all .3s ease;
+                        }
+                        .btn-repo {
+                           @include ownMixin.btnLink($primary, $white, 3px, inline-block, 0, 0, 0, 0, 4px, 14px, 4px, 14px);
+                           box-shadow: 0 8px 15px rgba($fontBlack, .1);
+                           transition: all .3s ease;
+                        }
+                        .btn-demo:hover,
+                        .btn-repo:hover,
+                        .btn-demo:active,
+                        .btn-repo:active {
+                           box-shadow: none;
+                           transition: all .3s ease;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+         .projects:hover,
+         .projects:active {
+            .overlay {
+               opacity: 1;
+               background-color: rgba($secondary, .9);
+               transition: all .3s ease;
+            }
+         }
+      }
+   }
+}
+
+// Blog //
+.blog {
+   .container {
+      padding-top: 100px;
+      .subheading, h2 {
+         font-family: 'Maven Pro', sans-serif;
+         font-weight: 700;
+         text-align: center;
+      }
+      .subheading {
+         display: block;
+         color: $secondary;
+         margin-bottom: 8px;
+         text-transform: uppercase;
+      }
+      h2 {
+         color: $fontBlack;
+         font-size: 32px;
+         margin-bottom: 40px;
+      }
+      .g-wrapper {
+         display: grid;
+         grid-template-columns: repeat(2, auto);
+         gap: 1em;
+         .posts-card {
+            border-radius: 5px;
+            background-color: $white;
+            padding: 20px;
+            width: 90%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba($fontBlack, .1);
+            img {
+               width: 100%;
+               border-radius: 5px;
+               margin-bottom: 12px;
+            }
+            .details {
+               color: $fontGray;
+               font-size: 14px;
+               font-weight: 700;
+               display: flex;
+               .fas {
+                  color: $secondary;
+               }
+               .date {
+                  margin-right: 8px;
+               }
+            }
+            .blog-title {
+               color: $fontBlack;
+               text-decoration: none;
+               display: inline-block;
+               font-weight: 700;
+               margin-top: 3px;
+               margin-bottom: 12px;
+            }
+            p {
+               color: $fontGray;
+               margin-bottom: 15px;
+            }
+         }
+      }
+   }
+}
+
+// Contact //
+.contact {
+   .container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding-top: 150px;
+      border: 1px solid orange;
+      .g-map {
+         width: 50%;
+         height: 600px;
+         background-color: red;
+      }
+      .form-contact {
+         width: 50%;
+         padding: 20px;
+         h3 {
+            font-family: 'Maven Pro', sans-serif;
+            font-size: 30px;
+            font-weight: 500;
+         }
+         p {
+            color: $fontGray;
+            margin: 8px 0;
+         }
+         .contact-details {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            .address,
+            .email,
+            .username {
+               margin-right: 16px;
+               .title {
+                  font-weight: 700;
+                  text-transform: uppercase;
+               }
+            }
+         }
+         .form-wrapper {
+            border: 1px solid red;
+            input,textarea {
+               font-family: 'Mukta', Helvetica, sans-serif;
+               font-size: .9rem;
+               color: $fontBlack;
+               background: none;
+               outline: none;
+               border: 2px solid rgba($fontGray, .3);
+               background-color: $white;
+               padding: 5px;
+               display: block;
+               width: 100%;
+               margin: 5px 0;
+               border-radius: 3px;
+               transition: all .2s ease-out;
+            }
+            textarea {
+               margin: 10px 0;
+               height: 160px;
+               resize: none;
+            }
+            input:focus,
+            textarea:focus {
+               transition: all .2s ease-out;
+               border: 2px solid rgba($secondary, 1);
+            }
+            .form-flex {
+               .row {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  .col {
+                     width: 50%;
+                     input {
+                        display: block;
+                        width: auto;
+                     }
+                  }
+                  .col:not(:last-child) {
+                     margin-right: 2em;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

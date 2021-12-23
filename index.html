@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nip's Journey</title>
+    <!-- Assets -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/solid.min.css"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="assets/scss/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed collapse" id="navbar">
+      <div class="container">
+        <a href="/" class="navbar-brand">Nip's Journey</a>
+        <button class="btn-toggle" id="btn-toggle">
+          <span class="fas fa-bars"></span> Menu
+        </button>
+        <div class="navbar-collapse">
+          <ul>
+            <li><a href="#home" id="link-home">Home</a></li>
+            <li><a href="#about" id="link-about">About</a></li>
+            <li><a href="#services" id="link-services">Services</a></li>
+            <li><a href="#portfolio" id="link-portfolio">Portfolio</a></li>
+            <li><a href="#blog" id="link-blog">Blog</a></li>
+            <li><a href="#contact" id="link-contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="jumbotron" id="home">
+      <div class="container">
+        <h1>
+          I'm Hanivan Rizky Sobari<br />
+          <span
+            id="changeText"
+            data-type="A Web Developer, Network Engineer, Linux Ethusiast, I Love to Develop."
+          ></span>
+        </h1>
+        <div class="description">
+          <p>
+            Just ordinary people that you can find anywhere, who have
+            aspirations to be useful to many people. But rarely seen for a long
+            time
+          </p>
+        </div>
+        <div class="links">
+          <a href="#" class="btn-link-1">Hire Me</a>
+          <a href="#" class="btn-link-2">View Portfolio</a>
+        </div>
+        <div class="medsos">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-img">
+            <div class="img-about"></div>
+          </div>
+          <div class="col">
+            <div class="tabs">
+              <a href="#" id="tab-aboutme" class="tab-link active">About Me</a>
+              <a href="#" id="tab-skills" class="tab-link">Skills</a>
+              <a href="#" id="tab-experience" class="tab-link">Experience</a>
+            </div>
+            <!-- Content About -->
+            <div class="content aboutme" id="aboutme">
+              <h1>My Story</h1>
+              <p>
+                Starting from the frequent watching movies about hackers since
+                junior high school. Until choosing to enter a vocational school,
+                and because IT subjects are still lacking. I also took online
+                classes and bootcamps. But life is long...
+              </p>
+              <div class="motto">
+                <span
+                  >Keep learning stay awesome, ulah ngeluh ulah loba omong. Sok
+                  mangga langsung gawean</span
+                >
+              </div>
+            </div>
+
+            <!-- Content Skills -->
+            <div class="content skills" id="skills">
+              <h1>Skills</h1>
+              <p>
+                I have expertise in cyber security and web developer. Here are
+                the details of my skills:
+              </p>
+              <div class="row">
+                <div class="col-bar">
+                  <div class="bar">
+                    <h3>HTML/CSS</h3>
+                    <div class="progress">
+                      <div class="progress-bar html">
+                        <span>95%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bar">
+                    <h3>JavaScript</h3>
+                    <div class="progress">
+                      <div class="progress-bar javascript">
+                        <span>80%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bar">
+                    <h3>C++</h3>
+                    <div class="progress">
+                      <div class="progress-bar cpp">
+                        <span>80%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bar">
+                    <h3>NodeJS</h3>
+                    <div class="progress">
+                      <div class="progress-bar nodejs">
+                        <span>80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-bar">
+                  <div class="bar">
+                    <h3>SASS</h3>
+                    <div class="progress">
+                      <div class="progress-bar sass">
+                        <span>80%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bar">
+                    <h3>PHP</h3>
+                    <div class="progress">
+                      <div class="progress-bar php">
+                        <span>85%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bar">
+                    <h3>MySQL</h3>
+                    <div class="progress">
+                      <div class="progress-bar mysql">
+                        <span>85%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bar">
+                    <h3>CodeIgniter</h3>
+                    <div class="progress">
+                      <div class="progress-bar codeigniter">
+                        <span>80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Experience -->
+            <div class="content experience" id="experience">
+              <h3>Web Developer</h3>
+              <span class="date">2018-Now</span>
+              <span class="position">
+                <span class="fas fa-map-marker-alt"></span> Freelancer
+              </span>
+              <p>
+                Work by finding clients online and offline. And sometimes make
+                apps to make personal work easier
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <div class="container">
+        <span class="subheading">Services</span>
+        <h2>This is My Expertise, The Services I'll Provide My Clients</h2>
+
+        <div class="g-wrapper">
+          <div class="web">
+            <div class="icons">
+              <span class="fas fa-code"></span>
+            </div>
+            <h3>Web Development</h3>
+            <p>
+              I'm ready to build you a web page from start to finish, but be
+              honest. I'm not good at inspiration. And I can also change the
+              design you have into a website
+            </p>
+            <a href="#" class="readmore"
+              >Read More <span class="fas fa-long-arrow-alt-right"></span
+            ></a>
+          </div>
+
+          <div class="linux">
+            <div class="icons">
+              <span class="fab fa-linux"></span>
+            </div>
+            <h3>Linux</h3>
+            <p>
+              I will provide services on how to install, configure and
+              troubleshoot and fix errors on the Linux operating system
+            </p>
+            <a href="#" class="readmore"
+              >Read More <span class="fas fa-long-arrow-alt-right"></span
+            ></a>
+          </div>
+
+          <div class="networking">
+            <div class="icons">
+              <span class="fas fa-network-wired"></span>
+            </div>
+            <h3>Networking</h3>
+            <p>
+              Because I often experiment with building a local network at home.
+              So I can help you to install it in your environment. Don't
+              hesitate if you want a consultation
+            </p>
+            <a href="#" class="readmore"
+              >Read More <span class="fas fa-long-arrow-alt-right"></span
+            ></a>
+          </div>
+        </div>
+
+        <span class="contact-me"
+          >Do you want your work done by me? <a href="#">Contact Me</a></span
+        >
+        <p class="tagline">
+          Let's work together in building dreams through the opportunities that
+          exist
+        </p>
+      </div>
+    </section>
+
+    <!-- Counter -->
+    <section class="counter" id="counter">
+      <div class="overlay">
+        <div class="container">
+          <div class="count-wrapper">
+            <div class="count">
+              <span class="fas fa-user-friends"></span>
+              <div class="row">
+                <div class="col">
+                  <span class="countup">5</span>
+                </div>
+                <div class="col">
+                  <span class="caption">Happy Customer</span>
+                </div>
+              </div>
+            </div>
+            <div class="count">
+              <span class="fas fa-folder-open"></span>
+              <div class="row">
+                <div class="col">
+                  <span class="countup">21</span>
+                </div>
+                <div class="col">
+                  <span class="caption">Project Completed</span>
+                </div>
+              </div>
+            </div>
+            <div class="count">
+              <span class="fas fa-coffee"></span>
+              <div class="row">
+                <div class="col">
+                  <span class="countup">10</span>
+                </div>
+                <div class="col">
+                  <span class="caption">Cups Of Coffee</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <span class="subheading">Portfolio</span>
+        <h2>My Latest Work</h2>
+
+        <div class="g-wrapper">
+          <div
+            class="projects"
+            style="
+              background-image: url('/assets/img/project-contact-landingpage.png');
+            "
+          >
+            <div class="overlay">
+              <h3>Contact Landing Page</h3>
+              <span class="type">Front End</span>
+              <div class="links-wrapper">
+                <div class="row">
+                  <div class="col">
+                    <a href="#" class="btn-link btn-demo">Live Demo</a>
+                  </div>
+                  <div class="col">
+                    <a href="#" class="btn-link btn-repo">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="projects"
+            style="
+              background-image: url('/assets/img/project-contact-landingpage.png');
+            "
+          >
+            <div class="overlay">
+              <h3>Contact Landing Page</h3>
+              <span class="type">Front End</span>
+              <div class="links-wrapper">
+                <div class="row">
+                  <div class="col">
+                    <a href="#" class="btn-link btn-demo">Live Demo</a>
+                  </div>
+                  <div class="col">
+                    <a href="#" class="btn-link btn-repo">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog" id="blog">
+      <div class="container">
+        <span class="subheading">Our Blog</span>
+        <h2>Recent Posts</h2>
+
+        <div class="g-wrapper">
+          <div class="posts-card collapse 1" id="posts-card">
+            <img
+              src="/assets/img/jumbotron_dark.jpg"
+              alt="keyboard"
+              id="img-posts"
+            />
+            <div class="details">
+              <div class="date">
+                <span class="fas fa-calendar"></span> 14-12-2021
+              </div>
+              <div class="author"><span class="fas fa-user"></span> Anip</div>
+            </div>
+            <a href="#" class="blog-title">
+              Cara Membuat File Sharing Server Dengan Apache di Linux Ubuntu
+              (WebDAV)
+            </a>
+            <p class="description">
+              Pada kesempatan kali ini saya akan mempraktekkannya di Linux
+              Ubuntu dan menggunakan module WebDAV dari Apache2. Tapi sebelum
+              itu, usahakan sedia yang namanya internet, kopi, gorengan. Biar
+              kalau error bisa browsing cara solving error-nya sambil sruput
+              kopi.
+            </p>
+          </div>
+
+          <div class="posts-card collapse 2" id="posts-card">
+            <img
+              src="/assets/img/jumbotron_dark.jpg"
+              alt="keyboard"
+              id="img-posts"
+            />
+            <div class="details">
+              <div class="date">
+                <span class="fas fa-calendar"></span> 14-12-2021
+              </div>
+              <div class="author"><span class="fas fa-user"></span> Anip</div>
+            </div>
+            <a href="#" class="blog-title">
+              Cara Membuat File Sharing Server Dengan Apache di Linux Ubuntu
+              (WebDAV)
+            </a>
+            <p class="description">
+              Pada kesempatan kali ini saya akan mempraktekkannya di Linux
+              Ubuntu dan menggunakan module WebDAV dari Apache2. Tapi sebelum
+              itu, usahakan sedia yang namanya internet, kopi, gorengan. Biar
+              kalau error bisa browsing cara solving error-nya sambil sruput
+              kopi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="g-map" id="g-map"></div>
+        <div class="form-contact">
+          <h3>Contact Us</h3>
+          <p>We're open for any suggestion or just to have a chat</p>
+          <div class="contact-details">
+            <div class="address">
+              <span class="title">My Address: </span>
+              <p class="description">
+                Kp. Kebon Manggis RT 01/11, Kel. Paledang, Kec. Bogor Tengah
+              </p>
+            </div>
+            <div class="email">
+              <span class="title">My Email: </span>
+              <p class="description">hanivan20@gmail.com</p>
+            </div>
+            <div class="username">
+              <span class="title">My Contact: </span>
+              <p class="description">@hanivanrizky</p>
+            </div>
+          </div>
+          <form class="form-wrapper">
+            <div class="form-flex">
+              <div class="row">
+                <div class="col">
+                  <input
+                    type="text"
+                    name="fName"
+                    id="name"
+                    placeholder="Name"
+                    class="form-input"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                    class="form-input"
+                  />
+                </div>
+              </div>
+            </div>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+              class="form-input"
+            />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Type message here..."
+              class="form-input"
+            ></textarea>
+            <button type="submit" class="btn-submit" id="btn-submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!-- <script -->
+    <!--   async -->
+    <!--   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOmCcFMBATL17FvCkHkIb-T4kTGIFwbD0&callback=initMap" -->
+    <!-- ></script> -->
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
