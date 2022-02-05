@@ -20,7 +20,7 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="assets/scss/main.css" />
   </head>
-  <body>
+  <body class="dark">
     <nav class="navbar navbar-fixed collapse" id="navbar">
       <div class="container">
         <a href="/" class="navbar-brand">Nip's Journey</a>
@@ -29,7 +29,7 @@
         </button>
         <div class="navbar-collapse">
           <ul>
-            <li><a href="#home" id="link-home">Home</a></li>
+            <li><a href="#home" class="active" id="link-home">Home</a></li>
             <li><a href="#about" id="link-about">About</a></li>
             <li><a href="#services" id="link-services">Services</a></li>
             <li><a href="#portfolio" id="link-portfolio">Portfolio</a></li>
@@ -42,7 +42,7 @@
 
     <!-- Header -->
     <section class="jumbotron" id="home">
-      <div class="container">
+      <div class="container reveal show">
         <h1>
           I'm Hanivan Rizky Sobari<br />
           <span
@@ -62,9 +62,17 @@
           <a href="#" class="btn-link-2">View Portfolio</a>
         </div>
         <div class="medsos">
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
-          <a href="#">LinkedIn</a>
+          <a
+            href="https://www.facebook.com/Hanivan.Rizky.Sobari"
+            target="_blank"
+            >Facebook</a
+          >
+          <a href="https://www.instagram.com/hanivanrizky" target="_blank"
+            >Instagram</a
+          >
+          <a href="https://www.linkedin.com/in/hanivanrizky" target="_blank"
+            >LinkedIn</a
+          >
         </div>
       </div>
     </section>
@@ -73,17 +81,17 @@
     <section class="about" id="about">
       <div class="container">
         <div class="row">
-          <div class="col-img">
+          <div class="col-img reveal">
             <div class="img-about"></div>
           </div>
-          <div class="col">
+          <div class="col reveal">
             <div class="tabs">
-              <a href="#" id="tab-aboutme" class="tab-link active">About Me</a>
-              <a href="#" id="tab-skills" class="tab-link">Skills</a>
-              <a href="#" id="tab-experience" class="tab-link">Experience</a>
+              <a href="#" id="aboutme" class="tab-link active">About Me</a>
+              <a href="#" id="skills" class="tab-link">Skills</a>
+              <a href="#" id="experience" class="tab-link">Experience</a>
             </div>
             <!-- Content About -->
-            <div class="content aboutme" id="aboutme">
+            <div class="content aboutme has-fade show" id="profile aboutme">
               <h1>My Story</h1>
               <p>
                 Starting from the frequent watching movies about hackers since
@@ -100,7 +108,7 @@
             </div>
 
             <!-- Content Skills -->
-            <div class="content skills" id="skills">
+            <div class="content skills" id="profile skills">
               <h1>Skills</h1>
               <p>
                 I have expertise in cyber security and web developer. Here are
@@ -179,11 +187,11 @@
             </div>
 
             <!-- Content Experience -->
-            <div class="content experience" id="experience">
+            <div class="content experience" id="profile experience">
               <h3>Web Developer</h3>
               <span class="date">2018-Now</span>
               <span class="position">
-                <span class="fas fa-map-marker-alt"></span> Freelancer
+                <span class="fas fa-building"></span> Freelancer
               </span>
               <p>
                 Work by finding clients online and offline. And sometimes make
@@ -197,7 +205,7 @@
 
     <!-- Services -->
     <section class="services" id="services">
-      <div class="container">
+      <div class="container reveal">
         <span class="subheading">Services</span>
         <h2>This is My Expertise, The Services I'll Provide My Clients</h2>
 
@@ -248,7 +256,8 @@
         </div>
 
         <span class="contact-me"
-          >Do you want your work done by me? <a href="#">Contact Me</a></span
+          >Do you want your work done by me?
+          <a href="mailto:hanivan20@gmail.com">Contact Me</a></span
         >
         <p class="tagline">
           Let's work together in building dreams through the opportunities that
@@ -260,13 +269,13 @@
     <!-- Counter -->
     <section class="counter" id="counter">
       <div class="overlay">
-        <div class="container">
+        <div class="container reveal">
           <div class="count-wrapper">
             <div class="count">
               <span class="fas fa-user-friends"></span>
               <div class="row">
                 <div class="col">
-                  <span class="countup">5</span>
+                  <span class="countup" data-target="5">0</span>
                 </div>
                 <div class="col">
                   <span class="caption">Happy Customer</span>
@@ -277,7 +286,7 @@
               <span class="fas fa-folder-open"></span>
               <div class="row">
                 <div class="col">
-                  <span class="countup">21</span>
+                  <span class="countup" data-target="21">0</span>
                 </div>
                 <div class="col">
                   <span class="caption">Project Completed</span>
@@ -288,7 +297,7 @@
               <span class="fas fa-coffee"></span>
               <div class="row">
                 <div class="col">
-                  <span class="countup">10</span>
+                  <span class="countup" data-target="10">0</span>
                 </div>
                 <div class="col">
                   <span class="caption">Cups Of Coffee</span>
@@ -302,13 +311,13 @@
 
     <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
-      <div class="container">
+      <div class="container reveal">
         <span class="subheading">Portfolio</span>
         <h2>My Latest Work</h2>
 
         <div class="g-wrapper">
           <div
-            class="projects"
+            class="projects reveal"
             style="
               background-image: url('/assets/img/project-contact-landingpage.png');
             "
@@ -330,7 +339,95 @@
           </div>
 
           <div
-            class="projects"
+            class="projects reveal"
+            style="
+              background-image: url('/assets/img/project-contact-landingpage.png');
+            "
+          >
+            <div class="overlay">
+              <h3>Contact Landing Page</h3>
+              <span class="type">Front End</span>
+              <div class="links-wrapper">
+                <div class="row">
+                  <div class="col">
+                    <a href="#" class="btn-link btn-demo">Live Demo</a>
+                  </div>
+                  <div class="col">
+                    <a href="#" class="btn-link btn-repo">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="projects reveal"
+            style="
+              background-image: url('/assets/img/project-contact-landingpage.png');
+            "
+          >
+            <div class="overlay">
+              <h3>Contact Landing Page</h3>
+              <span class="type">Front End</span>
+              <div class="links-wrapper">
+                <div class="row">
+                  <div class="col">
+                    <a href="#" class="btn-link btn-demo">Live Demo</a>
+                  </div>
+                  <div class="col">
+                    <a href="#" class="btn-link btn-repo">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="projects reveal"
+            style="
+              background-image: url('/assets/img/project-contact-landingpage.png');
+            "
+          >
+            <div class="overlay">
+              <h3>Contact Landing Page</h3>
+              <span class="type">Front End</span>
+              <div class="links-wrapper">
+                <div class="row">
+                  <div class="col">
+                    <a href="#" class="btn-link btn-demo">Live Demo</a>
+                  </div>
+                  <div class="col">
+                    <a href="#" class="btn-link btn-repo">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="projects reveal"
+            style="
+              background-image: url('/assets/img/project-contact-landingpage.png');
+            "
+          >
+            <div class="overlay">
+              <h3>Contact Landing Page</h3>
+              <span class="type">Front End</span>
+              <div class="links-wrapper">
+                <div class="row">
+                  <div class="col">
+                    <a href="#" class="btn-link btn-demo">Live Demo</a>
+                  </div>
+                  <div class="col">
+                    <a href="#" class="btn-link btn-repo">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="projects reveal"
             style="
               background-image: url('/assets/img/project-contact-landingpage.png');
             "
@@ -356,17 +453,22 @@
 
     <!-- Blog -->
     <section class="blog" id="blog">
-      <div class="container">
+      <div class="container reveal">
         <span class="subheading">Our Blog</span>
         <h2>Recent Posts</h2>
 
         <div class="g-wrapper">
-          <div class="posts-card collapse 1" id="posts-card">
+          <div class="posts-card collapse" id="posts-card">
             <img
-              src="/assets/img/jumbotron_dark.jpg"
+              src="/assets/img/jumbotron.jpg"
               alt="keyboard"
               id="img-posts"
             />
+            <div class="category">
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">Linux</a>
+              <a href="#" class="item">Server</a>
+            </div>
             <div class="details">
               <div class="date">
                 <span class="fas fa-calendar"></span> 14-12-2021
@@ -386,12 +488,46 @@
             </p>
           </div>
 
-          <div class="posts-card collapse 2" id="posts-card">
+          <div class="posts-card collapse" id="posts-card">
             <img
               src="/assets/img/jumbotron_dark.jpg"
               alt="keyboard"
               id="img-posts"
             />
+            <div class="category">
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+              <a href="#" class="item">IT</a>
+            </div>
             <div class="details">
               <div class="date">
                 <span class="fas fa-calendar"></span> 14-12-2021
@@ -411,12 +547,13 @@
             </p>
           </div>
         </div>
+        <a href="/blog" class="btn btn-secondary btn-blog">See all posts</a>
       </div>
     </section>
 
+    <!-- Contact -->
     <section class="contact" id="contact">
       <div class="container">
-        <div class="g-map" id="g-map"></div>
         <div class="form-contact">
           <h3>Contact Us</h3>
           <p>We're open for any suggestion or just to have a chat</p>
@@ -433,10 +570,20 @@
             </div>
             <div class="username">
               <span class="title">My Contact: </span>
-              <p class="description">@hanivanrizky</p>
+              <a
+                href="https://t.me/hanivanrizky"
+                target="_blank"
+                title="Telegram"
+                class="description"
+                >@hanivanrizky</a
+              >
             </div>
           </div>
-          <form class="form-wrapper">
+          <div class="notification" id="notification">
+            <span class="fas fa-info-circle"></span>
+            <span class="msg">Success Send Email</span>
+          </div>
+          <form class="form-wrapper" id="form-wrapper">
             <div class="form-flex">
               <div class="row">
                 <div class="col">
@@ -446,6 +593,7 @@
                     id="name"
                     placeholder="Name"
                     class="form-input"
+                    required
                   />
                 </div>
                 <div class="col">
@@ -455,6 +603,7 @@
                     id="email"
                     placeholder="Email"
                     class="form-input"
+                    required
                   />
                 </div>
               </div>
@@ -465,26 +614,159 @@
               id="subject"
               placeholder="Subject"
               class="form-input"
+              required
             />
             <textarea
               name="message"
               id="message"
               placeholder="Type message here..."
               class="form-input"
+              required
             ></textarea>
             <button type="submit" class="btn-submit" id="btn-submit">
               Send Message
             </button>
           </form>
+          <div class="flw-sosmed">
+            <p>Hey! follow me too on</p>
+            <div class="wrapper">
+              <a
+                href="https://github.com/Hanivan"
+                target="_blank"
+                title="Github"
+                ><span class="fab fa-github"></span
+              ></a>
+              <a
+                href="https://youtube.com/c/LintasanVideo"
+                target="_blank"
+                title="Youtube"
+                ><span class="fab fa-youtube"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="g-map" id="g-map"></div>
+      </div>
+    </section>
+
+    <!-- Footer Intro -->
+    <section class="f-intro">
+      <div class="container">
+        <div class="overlay">
+          <div class="row">
+            <div class="col">
+              <h2>Let's work together!</h2>
+              <p>How do you take your coffee?</p>
+            </div>
+            <div class="col">
+              <a href="mailto:hanivan20@gmail.com" class="btn-btn-primary"
+                >Contact Me</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="main-footer">
+          <div class="g-wrapper">
+            <div class="f-about">
+              <a href="/" class="link-brand">Nip's Journey</a>
+              <p>
+                Welcome to my personal portfolio web page. This page is hosted
+                using Github Pages.
+              </p>
+              <div class="row">
+                <div class="col">
+                  <a
+                    href="https://www.facebook.com/Hanivan.Rizky.Sobari"
+                    target="_blank"
+                    ><span class="fab fa-facebook-f"></span
+                  ></a>
+                </div>
+                <div class="col">
+                  <a
+                    href="https://www.instagram.com/hanivanrizky"
+                    target="_blank"
+                    ><span class="fab fa-instagram"></span
+                  ></a>
+                </div>
+                <div class="col">
+                  <a
+                    href="https://www.linkedin.com/in/hanivanrizky"
+                    target="_blank"
+                    ><span class="fab fa-linkedin-in"></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="f-services">
+              <h2>Services</h2>
+              <ul>
+                <li>
+                  <a href="#services"
+                    ><span class="fas fa-arrow-right"></span> Web Development</a
+                  >
+                </li>
+                <li>
+                  <a href="#services"
+                    ><span class="fas fa-arrow-right"></span> Linux</a
+                  >
+                </li>
+                <li>
+                  <a href="#services"
+                    ><span class="fas fa-arrow-right"></span> Networking</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="f-questions">
+              <h2>Have a Questions?</h2>
+              <ul>
+                <li>
+                  <span class="fas fa-map-marker-alt"></span> Kp. Kebon Manggis
+                  RT 01/11, Kel. Paledang, Kec. Bogor Tengah
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="fas fa-phone-alt"></span> +## #### #### ##</a
+                  >
+                </li>
+                <li><span class="fas fa-at"></span> hanivan20@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>Copyright ©2021</span>
+        <span
+          >Made with <a href="/v1" class="love" title="You Found Me!">♥</a> by
+          Hanivan Rizky Sobari</span
+        >
+      </div>
+    </footer>
+
+    <!-- TypeWriter  -->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <!-- <script -->
-    <!--   async -->
-    <!--   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOmCcFMBATL17FvCkHkIb-T4kTGIFwbD0&callback=initMap" -->
-    <!-- ></script> -->
+    <!-- Maps API -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOmCcFMBATL17FvCkHkIb-T4kTGIFwbD0&callback=initMap"
+    ></script>
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_Sk4Le6mUvnBWVvqAwQJMK");
+      })();
+    </script>
 
     <script src="assets/js/main.js"></script>
   </body>

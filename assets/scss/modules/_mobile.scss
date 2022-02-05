@@ -1,308 +1,406 @@
-@use 'mixins' as ownMixin;
-@import 'fonts';
-@import 'colors';
+@use "mixins" as ownMixin;
+@import "fonts";
+@import "colors";
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 640px) {
-   .container {
-      margin: 0 3%;
-   }
-   
-   // Navbar
-   @include ownMixin.navbar-md();
+  .container {
+    @include ownMixin.container(0, 3%);
+  }
 
-   // Jumbotron
-   .jumbotron {
-      .container {
-         h1 {
-            padding-top: 100px;
-            font-size: 34px;
-         }
-         p {
-            width: 100%;
-         }
-         .links {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            a {
-               text-align: center;
-               width: 72%;
-               padding-right: 80px;
-            }
-            a:first-child {
-               margin-left: 8px;
-            }
-            a:last-child {
-               margin-top: 10px;
-               padding-right: 50px;
-            }
-         }
+  // Navbar
+  @include ownMixin.navbar-md();
+
+  // Jumbotron
+  .jumbotron {
+    .container {
+      h1 {
+        padding-top: 100px;
+        font-size: 34px;
       }
-   }
-
-   // About //
-   .about {
-      .container {
-         .row {
-            flex-direction: column;
-            .col-img {
-               margin-right: 0;
-               margin-bottom: 35px;
-               .img-about {
-                  margin: 0 auto;
-               }
-            }
-            .col {
-               display: block;
-               width: 100%;
-               .content.skills {
-                  // display: block;
-                  max-width: 100%;
-                  .row {
-                     display: block;
-                     width: 100%;
-                     .bar {
-                        width: 100%;
-                        position: relative;
-                        .progress {
-                           width: 100%;
-                        }
-                        .progress-bar.html,
-                        .progress-bar.javascript,
-                        .progress-bar.cpp,
-                        .progress-bar.nodejs,
-                        .progress-bar.sass,
-                        .progress-bar.codeigniter,
-                        .progress-bar.php,
-                        .progress-bar.mysql {
-                           left: -600px;
-                        }
-                     }
-                  }
-               }
-            }
-         }
+      p {
+        width: 100%;
       }
-   }
-
-   // Services //
-   .services {
-      .container {
-         h2 {
-            width: auto;
-         }
-         .g-wrapper {
-            display: grid;
-            grid-template-columns: auto;
-            justify-content: center;
-            .web,
-            .linux,
-            .networking {
-               width: auto;
-               margin: auto;
-            }
-         }
+      .links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+          text-align: center;
+          width: 100%;
+          padding-right: 80px;
+        }
+        a:first-child {
+          margin-left: 8px;
+        }
+        a:last-child {
+          margin-top: 10px;
+          padding-right: 50px;
+        }
       }
-   }
+    }
+  }
 
-   // Counter //
-   .counter {
+  // About //
+  .about {
+    .container {
+      padding-top: 110px;
+      .row {
+        flex-direction: column;
+        .col-img {
+          margin-right: 0;
+          margin-bottom: 35px;
+          .img-about {
+            margin: 0 auto;
+          }
+        }
+        .col {
+          display: block;
+          width: 100%;
+          .content.skills {
+            // display: block;
+            max-width: 100%;
+            .row {
+              display: block;
+              width: 100%;
+              .bar {
+                width: 100%;
+                position: relative;
+                .progress {
+                  width: 100%;
+                }
+                .progress-bar.html,
+                .progress-bar.javascript,
+                .progress-bar.cpp,
+                .progress-bar.nodejs,
+                .progress-bar.sass,
+                .progress-bar.codeigniter,
+                .progress-bar.php,
+                .progress-bar.mysql {
+                  left: -600px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Services //
+  .services {
+    .container {
+      h2 {
+        width: auto;
+      }
+      .g-wrapper {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        .web,
+        .linux,
+        .networking {
+          width: auto;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  // Counter //
+  .counter {
+    height: 450px;
+    .overlay {
       height: 450px;
+      .container {
+        height: 450px;
+        .count-wrapper {
+          flex-direction: column;
+          height: 450px;
+          .count {
+            .fas {
+              font-size: 32px;
+            }
+            .countup {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Portfolio //
+  .portfolio {
+    .container {
+      .g-wrapper {
+        grid-template-columns: auto;
+        .projects {
+          margin-bottom: 0.8em;
+          .overlay {
+            opacity: 1;
+            h3,
+            .type {
+              text-shadow: 1px 1px 1px $fontGray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Blog //
+  .blog {
+    .container {
+      .g-wrapper {
+        grid-template-columns: auto;
+        .posts-card {
+          width: auto;
+          transition: all 0.7s ease;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  // Contact //
+  .contact {
+    .container {
+      display: block;
+      padding-top: 80px;
+      .g-map {
+        order: 2;
+        height: 300px;
+        margin-right: 0;
+        margin-top: 1em;
+        width: auto;
+      }
+      .form-contact {
+        width: auto;
+        @include ownMixin.container(0, 3%);
+        .contact-details {
+          flex-direction: column;
+        }
+        .form-wrapper {
+          .form-flex {
+            .row {
+              flex-direction: column;
+              .col:nth-child(1) {
+                margin-right: 0;
+              }
+              .col {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Footer Intro //
+  .f-intro {
+    .container {
       .overlay {
-         height: 450px;
-         .container {
-            height: 450px;
-            .count-wrapper {
-               flex-direction: column;
-               height: 450px;
-               .count {
-                  .fas {
-                     font-size: 32px;
-                  }
-                  .countup {
-                     font-size: 28px;
-                  }
-               }
+        height: 300px;
+        .row {
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          padding: 0 3%;
+          margin: auto;
+          .col {
+            width: 100%;
+            a {
+              display: inline-block;
+              margin-top: 1em;
+              width: 100%;
             }
-         }
+          }
+        }
       }
-   }
+    }
+  }
 
-   // Portfolio //
-   .portfolio {
+  // Footer //
+  .footer {
+    .container {
+      .g-wrapper {
+        grid-template-columns: repeat(1, auto);
+        gap: 1em;
+        .f-about {
+          p {
+            width: 100%;
+          }
+        }
+        .f-questions {
+          li {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .copyright {
+      height: auto;
+      line-height: auto;
+      span {
+        display: inline-block;
+      }
+    }
+  }
+  body.dark {
+    .navbar {
       .container {
-         .g-wrapper {
-            grid-template-columns: auto;
-           .projects {
-               margin-bottom: .8em;
-               .overlay {
-                  opacity: 1;
-                  h3,
-                  .type {
-                     text-shadow: 1px 1px 1px $fontGray;
-                  }
-               }
-            }
-         }
+        background-color: $darkPrimary;
       }
-   }
-
-   // Blog //
-   .blog {
-      .container {
-         .g-wrapper {
-            grid-template-columns: auto;
-            .posts-card {
-               width: auto;
-               transition: all .7s ease;
-            }
-            .posts-card.collapse {
-               overflow: hidden;
-               height: 245px;
-               transition: all .7s ease;
-               p {
-                  overflow: hidden;
-                  visibility: collapse;
-                  transition: all .7s ease;
-               }
-            }
-            .posts-card.show {
-               height: 430px;
-               overflow: hidden;
-               transition: all .7s ease;
-               p {
-                  overflow: hidden;
-                  visibility: visible;
-                  transition: all .7s ease;
-               }
-            }
-         }
-      }
-   }
-
-}
-
-/* Small mobile landscape */
-@media only screen and (min-width: 640px) and (max-width: 640px) {
-
-   // Blog //
-   .blog {
-      .container {
-         .g-wrapper {
-            grid-template-columns: auto;
-            .posts-card {
-               width: auto;
-               transition: all .7s ease;
-            }
-            .posts-card.collapse {
-               overflow: hidden;
-               height: 315px;
-               transition: all .7s ease;
-               p {
-                  overflow: hidden;
-                  visibility: collapse;
-                  transition: all .7s ease;
-               }
-            }
-            .posts-card.show {
-               height: 490px;
-               overflow: hidden;
-               transition: all .7s ease;
-               p {
-                  overflow: hidden;
-                  visibility: visible;
-                  transition: all .7s ease;
-               }
-            }
-         }
-      }
-   }
-   
+    }
+  }
 }
 
 /* large devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-   .container {
-      margin: 0 5%;
-   }
+  .container {
+    margin: 0 5%;
+  }
 
-   // Navbar //
-   @include ownMixin.navbar-md();
+  // Navbar //
+  @include ownMixin.navbar-md();
 
-   // About //
-   .about {
-      .container {
-         .row {
-            .col-img {
-               margin-right: 20px;
-            }
-            .col {
-               .content.skills {
-                  p {
-                     width: 80%;
-                  }
-                  .row {
-                     display: block;
-                     flex-direction: column;
-                     justify-content: flex-start;
-                     align-items: flex-start;
-                     .bar {
-                        width: 100%;
-                        .progress {
-                           width: 100%;
-                        }
-                        .progress-bar.html,
-                        .progress-bar.javascript,
-                        .progress-bar.cpp,
-                        .progress-bar.nodejs,
-                        .progress-bar.sass,
-                        .progress-bar.codeigniter,
-                        .progress-bar.php,
-                        .progress-bar.mysql {
-                           left: -400px;
-                        }
-                     }
-                  }
-               }
-            }
-         }
+  // Jumbotron //
+  .jumbotron {
+    .container {
+      h1 {
+        padding-top: 100px;
       }
-   }
+    }
+  }
 
-   // Services //
-   .services {
-      .container {
-         .g-wrapper {
-            .web,
-            .linux,
-            .networking {
-               width: 60%;
-               p {
-                  height: auto;
-               }
+  // About //
+  .about {
+    .container {
+      .row {
+        .col-img {
+          margin-right: 20px;
+        }
+        .col {
+          .content.skills {
+            p {
+              width: 80%;
             }
-         }
-      }
-   }
-
-   // Portfolio //
-   .portfolio {
-      .container {
-         .g-wrapper {
-           .projects {
-               .overlay {
-                  opacity: 1;
-                  h3,
-                  .type {
-                     text-shadow: 1px 1px 1px $fontGray;
-                  }
-               }
+            .row {
+              display: block;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              .bar {
+                width: 100%;
+                .progress {
+                  width: 100%;
+                }
+                .progress-bar.html,
+                .progress-bar.javascript,
+                .progress-bar.cpp,
+                .progress-bar.nodejs,
+                .progress-bar.sass,
+                .progress-bar.codeigniter,
+                .progress-bar.php,
+                .progress-bar.mysql {
+                  left: -400px;
+                }
+              }
             }
-         }
+          }
+        }
       }
-   }
+    }
+  }
 
+  // Services //
+  .services {
+    .container {
+      .g-wrapper {
+        .web,
+        .linux,
+        .networking {
+          p {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  // Portfolio //
+  .portfolio {
+    .container {
+      .g-wrapper {
+        .projects {
+          @include ownMixin.slide(slideDown, 0.8s);
+          .overlay {
+            opacity: 1;
+            h3,
+            .type {
+              text-shadow: 1px 1px 1px $fontGray;
+            }
+          }
+        }
+        .projects.show {
+          display: block;
+          animation: rotateShow 1.5s forwards;
+        }
+        @keyframes rotateShow {
+          from {
+            opacity: 0;
+            transform: none;
+          }
+          to {
+            opacity: 1;
+            transform: rotateY(360deg);
+          }
+        }
+      }
+    }
+  }
+
+  // Contact //
+  .contact {
+    .container {
+      display: block;
+      .g-map {
+        display: none;
+      }
+      .form-contact {
+        width: auto;
+      }
+    }
+  }
+
+  // Footer Intro //
+  .f-intro {
+    .container {
+      margin-top: 10px;
+      .overlay {
+        .row {
+          padding: 0 3%;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  // Footer //
+  .footer {
+    .f-about {
+      p {
+        width: 200px;
+      }
+    }
+    .f-questions {
+      li {
+        width: 200px;
+      }
+    }
+  }
 }
